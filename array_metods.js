@@ -16,5 +16,14 @@ const result = prices
   .map((price) => price * 1.1);
 
 // 10
-const dubleNums = nums.reduce((acc, current) => acc * current);
-console.log(dubleNums);
+const multipliedNums = nums.reduce((acc, current) => acc * current);
+console.log(multipliedNums);
+
+// 12
+const users = [
+  { name: "Avi", age: 17 },
+  { name: "Dana", age: 22 },
+];
+
+const average = users.reduce((acc, user) => acc + user.age, 0) / users.length;
+console.log(average);
