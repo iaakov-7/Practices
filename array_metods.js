@@ -16,7 +16,7 @@ const result = prices
   .map((price) => price * 1.1);
 
 // 10
-const multipliedNums = nums.reduce((acc, current) => acc * current);
+const multipliedNums = nums.reduce((acc, current) => acc * current, nums[0]);
 console.log(multipliedNums);
 
 // 12
@@ -26,4 +26,7 @@ const users = [
 ];
 
 const average = users.reduce((acc, user) => acc + user.age, 0) / users.length;
-console.log(average);
+
+// 25
+const numbers = [20, 50, 87, 25, 98, 120, 45, 82, 41];
+numbers.sort((a, b) => b - a);
