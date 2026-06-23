@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "analiza-sync": "^1.0.1",
+    "prompt-sync": "^4.2.0"
+  },
+  "name": "introduction-to-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loops.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
