@@ -14,3 +14,7 @@ const prices = [100, 120, 50, 87, 180];
 const result = prices
   .filter((price) => price > 100)
   .map((price) => price * 1.1);
+
+// 10
+const dubleNums = nums.reduce((acc, current) => acc * current);
+console.log(dubleNums);
