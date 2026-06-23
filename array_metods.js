@@ -35,6 +35,17 @@
 // numbers.splice(1, 2);
 // console.log(numbers);
 
-// 32
-const arr = [1, [2, [3]]];
-const flatArr = arr.flat(Infinity);
+// // 32
+// const arr = [1, [2, [3]]];
+// const flatArr = arr.flat(Infinity);
+
+// // 36
+// const numbers = [1, 2, 3, 4, 5, 6];
+// const result = numbers
+//   .filter((num) => num % 2 == 0)
+//   .map((num) => num * 2)
+//   .reduce((acc, current) => acc + current);
+// console.log(result);
+
+// 38
+const arr = [{ type: "fruit" }, { type: "veg" }, { type: "fruit" }];
