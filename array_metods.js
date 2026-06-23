@@ -47,5 +47,43 @@
 //   .reduce((acc, current) => acc + current);
 // console.log(result);
 
-// 38
-const arr = [{ type: "fruit" }, { type: "veg" }, { type: "fruit" }];
+// // 38
+// const arr = [{ type: "fruit" }, { type: "veg" }, { type: "fruit" }];
+// const groupBy = arr.reduce((acc, current) => {
+//   const key = current.type;
+//   if (!acc[key]) {
+//     acc[key] = [];
+//   }
+//   acc[key].push(current);
+//   return acc;
+// }, {});
+// console.log(groupBy);
+
+// // 39
+// const numbers = [1, 2, 3, 4, 9, 6, 6];
+// const result = numbers.reduce((acc, current) => {
+//   const key = current;
+//   if (!acc[key]) {
+//     acc[key] = 0;
+//   }
+//   acc[key]++;
+//   return acc;
+// }, {});
+// const hasDuplicate = Object.values(result).some((num) => num > 1);
+// console.log(hasDuplicate);
+
+// //  41
+// const products = [
+//   { name: "Laptop", price: 800, inStock: true, category: "tech" },
+//   { name: "Phone", price: 400, inStock: false, category: "tech" },
+//   { name: "Shirt", price: 50, inStock: true, category: "fashion" },
+//   { name: "Table", price: 258, inStock: true, category: "fashion" },
+//   { name: "Banana", price: 128, inStock: true, category: "fashion" },
+//   { name: "popay", price: 28, inStock: true, category: "fashion" },
+// ];
+
+// const result = products
+//   .filter((product) => product.inStock && product.price > 100)
+//   .sort((a, b) => a.price - b.price)
+//   .map((product) => product.name)
+//   .join(" ");
