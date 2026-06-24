@@ -62,3 +62,25 @@ function discount(obj) {
   return Object.fromEntries(entr);
 }
 // 11
+function filtered(obj) {
+  const ent = Object.entries(obj).filter(([k, v]) => typeof v == "number");
+  return Object.fromEntries(ent);
+}
+
+// 12
+const copy = Object.assign({}, prices);
+copy.strawberry = 25;
+console.log(prices);
+
+// 13
+function compare(obj1, obj2) {
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+  if (keys1.length != keys2.length) {
+    return false;
+  }
+
+  return keys1.every((key) => Object.hasOwn(obj2, key));
+}
+
+console.log(compare(prices, copy));
