@@ -1,3 +1,4 @@
+// CommonJS
 // // 1
 
 // function add(a, b) {
@@ -48,4 +49,40 @@
 // const printMsg = (msg) => console.log(msg);
 // module.exports = { printMsg };
 
-// 11
+// ES6 Modules
+// // 1
+// export const sum = (a, b) => a + b;
+
+// // 2
+// export function greet(name) {
+//   return `Hello ${name}`;
+// }
+
+// // 3
+// export const PI = Math.PI;
+
+// // 4
+// export default function duble(n) {
+//   return n * 2;
+// }
+
+// 5
+// export const add = (a, b) => a + b;
+// export const multi = (a, b) => a * b;
+// export const divide = (a, b) => a / b;
+
+// // 6
+// const user = { name: "Yaakov", age: 22 };
+// export default user;
+
+// // 8
+
+// export default function add(a, b) {
+//   return a + b;
+// }
+// export function sub(a, b) {
+//   return a - b;
+// }
+
+// // 9
+// export const add = (a, b) => a + b;

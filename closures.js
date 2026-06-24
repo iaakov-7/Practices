@@ -66,24 +66,16 @@ console.log(manageSecret.getSecret());
 // 8
 
 function once(fn) {
-  const inner = () => fn();
+  let count = 1;
+  const inner = () => {
+    if (count === 1) {
+      fn();
+    }
+    count++;
+  };
   return inner;
 }
 const one = once(say_hello);
 one();
-
-// 9
-for (var i = 0; i < 3; i++) {
-  setTimeout(function () {
-    console.log(i);
-  }, 100);
-}
-
-// 10
-for (let i = 0; i < 3; i++) {
-  setTimeout(function () {
-    console.log(i);
-  }, 100);
-}
-
-module.export = say_hello;
+one();
+one();

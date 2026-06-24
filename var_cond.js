@@ -183,3 +183,7 @@ switch (role) {
 // console.log(add(4, 5));
 // console.log(multi(4, 5));
 // console.log(divide(4, 5));
+
+import { addAndDuble } from "./imports.js";
+
+console.log(addAndDuble(5, 5));
