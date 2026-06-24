@@ -79,3 +79,57 @@ const one = once(say_hello);
 one();
 one();
 one();
+
+// 12
+function createStack() {
+  const arr = [];
+  return {
+    push(value) {
+      arr.push(value);
+    },
+    pop() {
+      arr.pop();
+    },
+    peek() {
+      return arr[arr.length - 1];
+    },
+  };
+}
+const manage = createStack();
+manage.push(5);
+console.log(manage.peek());
+manage.push(7);
+console.log(manage.peek());
+manage.pop();
+console.log(manage.peek());
+
+// 13
+function createIdGenerator() {
+  let id = 1;
+  return () => id++;
+}
+const gen = createIdGenerator();
+console.log(gen()); // 1
+console.log(gen()); // 2
+
+// 15
+function createBankAccount(initialBalance) {
+  let balance = 0;
+  return {
+    deposit(amount) {
+      balance += amount;
+    },
+    withdraw(amount) {
+      balance -= amount;
+    },
+    getBalance() {
+      return balance;
+    },
+  };
+}
+const manageAccount = createBankAccount();
+console.log(manageAccount.getBalance());
+manageAccount.deposit(100);
+console.log(manageAccount.getBalance());
+manageAccount.withdraw(50);
+console.log(manageAccount.getBalance());
