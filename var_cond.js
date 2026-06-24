@@ -178,3 +178,8 @@ switch (role) {
   default:
     console.log("No access");
 }
+
+// const { add, multi, divide } = require("./imports.js");
+// console.log(add(4, 5));
+// console.log(multi(4, 5));
+// console.log(divide(4, 5));
