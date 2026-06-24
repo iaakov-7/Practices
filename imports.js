@@ -52,6 +52,6 @@
 
 // console.log(sum(8, 9));
 // console.log(sub(8, 9));
-import { add } from "./export.js";
+// import { add } from "./export.js";
 
-export const addAndDuble = (a, b) => add(a, b) * 2;
+// export const addAndDuble = (a, b) => add(a, b) * 2;

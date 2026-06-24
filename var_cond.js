@@ -184,6 +184,6 @@ switch (role) {
 // console.log(multi(4, 5));
 // console.log(divide(4, 5));
 
-import { addAndDuble } from "./imports.js";
+// import { addAndDuble } from "./imports.js";
 
-console.log(addAndDuble(5, 5));
+// console.log(addAndDuble(5, 5));
