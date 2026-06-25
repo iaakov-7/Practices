@@ -193,4 +193,91 @@
 // console.log(product1.hasStok());
 // console.log(product2.hasStok());
 
-// 19
+// // 19
+// function multiplier(n) {
+//   return function (num) {
+//     return num * n;
+//   };
+// }
+// const duble = multiplier(2);
+// const triple = multiplier(3);
+// console.log(duble(15));
+// console.log(triple(15));
+
+// // 20
+
+// function createString(prefix) {
+//   return function (str) {
+//     return prefix + " " + str;
+//   };
+// }
+
+// const hello = createString("Hello");
+// const bay = createString("Bay");
+// console.log(hello("yaakov"));
+// console.log(bay("yaakov"));
+
+// // 21, 22, 23
+// function manageMsgs() {
+//   const messages = [];
+//   return {
+//     push: function push(msg) {
+//       messages.push(msg);
+//     },
+//     get: function get() {
+//       return messages;
+//     },
+//     remove: function remove(index) {
+//       messages.splice(index, 1);
+//     },
+//   };
+// }
+
+// const messages = manageMsgs();
+// messages.push("hey");
+// messages.push("yaakov");
+// console.log(messages.get());
+// messages.push("bay");
+// console.log(messages.get());
+// messages.remove(1);
+// console.log(messages.get());
+
+// // 24
+// function userFactory(name) {
+//   let count = 0;
+//   return {
+//     name,
+//     loginCount: () => {
+//       count++;
+//       return count;
+//     },
+//   };
+// }
+
+// const user1 = userFactory("David");
+// console.log(user1.loginCount());
+// console.log(user1.loginCount());
+// console.log(user1.loginCount());
+
+// // 25
+// function rolesFactory() {
+//   let roles = [];
+//   return {
+//     add: function (role) {
+//       if (!roles.includes(role)) {
+//         roles.push(role);
+//       }
+//     },
+//     remove: function (role) {
+//       roles = roles.filter((r) => r != role);
+//     },
+//     check: function (role) {
+//       return roles.includes(role);
+//     },
+//   };
+// }
+// const manageRoles = rolesFactory();
+// manageRoles.add("admin");
+// console.log(manageRoles.check("admin"));
+// manageRoles.remove("admin");
+// console.log(manageRoles.check("admin"));
