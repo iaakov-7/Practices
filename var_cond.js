@@ -13,6 +13,7 @@ if (number % 2 == 0) {
 } else {
   console.log("The number us odd");
 }
+fhgnjhj
 
 // 3
 const isLoggedIn = false;
@@ -38,6 +39,7 @@ if (a > b) {
   console.log("B is bigger");
 } else {
   console.log("Equal");
+  cons
 }
 
 // 6
