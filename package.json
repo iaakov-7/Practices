@@ -17,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/iaakov-7/Practices/issues"
   },
-  "homepage": "https://github.com/iaakov-7/Practices#readme",
-  "dependencies": {
-    "analiza-sync": "^1.0.1"
-  }
+  "homepage": "https://github.com/iaakov-7/Practices#readme"
 }

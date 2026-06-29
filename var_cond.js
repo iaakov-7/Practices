@@ -13,8 +13,7 @@ if (number % 2 == 0) {
 } else {
   console.log("The number us odd");
 }
-fhgnjhj
-
+csdvdfv
 // 3
 const isLoggedIn = false;
 const message = isLoggedIn ? "Welcome" : "Please login";
@@ -22,6 +21,7 @@ console.log(message);
 
 // 4
 const num = 0;
+
 if (num > 0) {
   console.log("Positive");
 } else if (num < 0) {
