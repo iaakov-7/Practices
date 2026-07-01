@@ -99,18 +99,19 @@
 //   })
 //   .catch((err) => console.log(err.message));
 
-// 7
-const urls = [
-  "https://jsonplaceholder.typicode.com/users/10001",
-  "https://jsonplaceholder.typicode.com/posts/1",
-  "https://jsonplaceholder.typicode.com/todos/1",
-];
+// // 7
+// const urls = [
+//   "https://jsonplaceholder.typicode.com/users/10001",
+//   "https://jsonplaceholder.typicode.com/posts/1",
+//   "https://jsonplaceholder.typicode.com/todos/1",
+// ];
 const promieses = urls.map((url) =>
   fetch(url).then((res) => {
     console.log("status:", res.status, res.statusText);
     if (!res.ok) {
       throw new Error("HTTP error " + res.status);
     }
+    console.log(res.json());
     return res.json();
   }),
 );
