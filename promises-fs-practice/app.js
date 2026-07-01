@@ -56,7 +56,7 @@ import fs from "fs/promises";
 //     fs.appendFile(filePath, content, (err) => {
 //       if (err) {
 //         rej(err);
-//         return;
+//         return
 //       }
 //       res();
 //     });
