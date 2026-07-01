@@ -100,39 +100,20 @@
 //   .catch((err) => console.log(err.message));
 
 // 7
-const results = {};
-fetch("https://jsonplaceholder.typicode.com/users/1")
-  .then((res) => {
+const urls = [
+  "https://jsonplaceholder.typicode.com/users/10001",
+  "https://jsonplaceholder.typicode.com/posts/1",
+  "https://jsonplaceholder.typicode.com/todos/1",
+];
+const promieses = urls.map((url) =>
+  fetch(url).then((res) => {
     console.log("status:", res.status, res.statusText);
     if (!res.ok) {
-      console.log("HTTP error" + res.status);
+      throw new Error("HTTP error " + res.status);
     }
     return res.json();
-  })
-  .then((res) => {
-    results.user = res;
-    return fetch("https://jsonplaceholder.typicode.com/posts/1");
-  })
-  .then((res) => {
-    console.log("status:", res.status, res.statusText);
-    if (!res.ok) {
-      console.log("HTTP error" + res.status);
-    }
-    return res.json();
-  })
-  .then((res) => {
-    results.post = res;
-    return fetch("https://jsonplaceholder.typicode.com/todos/1");
-  })
-  .then((res) => {
-    console.log("status:", res.status, res.statusText);
-    if (!res.ok) {
-      console.log("HTTP error" + res.status);
-    }
-    return res.json();
-  })
-  .then((res) => {
-    results.todo = res;
-    console.log(results.user, results.post, results.todo);
-  })
-  .catch((err) => console.log(err));
+  }),
+);
+Promise.all(promieses)
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err.message));
